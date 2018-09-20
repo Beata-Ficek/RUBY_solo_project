@@ -1,0 +1,128 @@
+body {
+  background: white;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: black;
+  font-family: 'Playfair Display', serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-size: 5em;
+  color: #FF9708;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+a, a:link, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #F17F42;
+}
+
+.orange-link:hover, .orange-link:active, .orange-link:focus {
+  color: #F17F42;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+nav li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 2%;
+  }
+
+.container-info{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+td {
+  text-align: center;
+}
+
+.more-info{
+
+  width: 60%;
+  align-content: center;
+  margin: auto;
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  text-justify: center;
+}
+
+p.start{
+  font-size: 25;
+  font-style: oblique;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  border-radius: 50%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.nav-container {
+ display: flex;
+ /* align-content: center; */
+ justify-content: center;
+ flex-direction: column;
+}
+
+.border {
+  border-bottom: solid 1px black;
+}
+
+div.bold-text {
+  font-style: bold;
+}

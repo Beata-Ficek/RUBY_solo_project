@@ -1,0 +1,28 @@
+<main class="container"><h1><%= @bee.name %></h1>
+<h2>Type:</h2> <p> <%= @bee.type_of_bee.name  %></p>
+<h2>Plants pollinated:</h2>
+<br>
+<ul>
+  <% @bee.plants_pollinated_by_bees.each do |plant| %>
+  <li><%= plant.name %></li>
+  <% end %>
+</ul>
+<br>
+<h2> How hungry is <%= @bee.name %>?</h2>
+<p><%= @bee.name %> <%= @bee.how_hungry%></p>
+
+
+<form method="POST" action="/bees/<%= @bee.id %>/edit">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <input class="btn btn--danger" type="submit" value="Change my bee"/>
+    </div>
+
+  </div>
+</form>
+
+<form class="" action="/bees/<%= @bee.id%>/delete" method="post">
+  <input class="btn btn--danger orange-link" type="submit" value="DELETE">
+</form>
+</main>

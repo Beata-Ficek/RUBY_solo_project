@@ -1,0 +1,29 @@
+.btn {
+  border:0px none;
+  border-radius: 3%;
+  padding: 2px 8px;
+  color: white;
+  cursor:pointer;
+  font-family: 'Lato';
+  text-transform: uppercase;
+}
+
+.btn--danger {
+  background-color: black;
+}
+
+.btn--danger:hover {
+  background-color: black;
+}
+
+.btn--action:hover {
+  background-color: white;
+}
+
+.btn--action {
+  background-color: white;
+}
+
+.btn--wrapper {
+  margin: 0px 0px 20px 0px;
+}

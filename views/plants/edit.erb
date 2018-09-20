@@ -1,0 +1,37 @@
+<main class="container">
+
+<h2>Edit <%= @plant.name %></h2>
+<form method="POST" action="/plants/<%= @plant.id %>">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="name"><p>Name:</p></label>
+      <input type="text" name="name" id="name" value="<%= @plant.name %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="type_select"><p>Season to plant:</p></label>
+    <select name="season" id="type_select" selected="<%= @plant.season  %>">
+    <option value="Spring">Spring</option>
+    <option value="Summer">Summer</option>
+    <option value="Autumn">Autumn</option>
+    <option value="Winter">Winter</option>
+   </select>
+</div>
+
+    <div class="form-el">
+      <label for="pollen"><p>Pollen (max 100):</p></label>
+      <input type="number" name="pollen" id="pollen" value="<%= @plant.pollen%>"/>
+    </div>
+
+
+  <br>
+
+    <div class="form-el">
+      <input class= "btn btn--danger orange-link" type="submit" value="Plant new one"/>
+    </div>
+
+  </div>
+</form>
+
+</main>

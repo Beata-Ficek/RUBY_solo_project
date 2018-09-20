@@ -1,0 +1,22 @@
+<main class="container">
+  <h1>Pollinate</h1>
+
+
+  <p class="btn--wrapper border">
+  Let the bee <a class="btn btn--action orange-link" href="/foods/new">pollinate</a> another plant
+  </p>
+  <ul>
+    <% for food in @foods %>
+    <li>
+    <p><%= food.bee.name %> <%= @actions.sample %> <%= food.plant.name %> </p>
+      <p>
+        <form action="/foods/<%= food.id %>/delete" method="POST">
+          <input class="btn btn--danger orange-link" type="submit" value="delete" />
+        </form>
+      </p>
+    </li>
+    <% end %>
+  </ul>
+
+
+</main>

@@ -1,0 +1,17 @@
+<main class="container">
+  <h2>You successfully created <%= @bee.name.capitalize%> the Bee</h2>
+  <br>
+    <p>Type: <i><%= @bee.type_of_bee.name  %> </i><br>
+     <p> How hungry is your new bee?</p>
+      <p>→ <%= @bee.name.capitalize%> <%= @bee.how_hungry%></p>
+    <br>
+
+
+     <form method="GET" action="/foods/new">
+       <div class="form-wrapper">
+
+         <div class="form-el">
+           <input class="btn btn--danger orange-link" type="submit"  value="pollinate!"/>
+         </div></p>
+         
+</main>

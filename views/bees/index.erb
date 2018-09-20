@@ -1,0 +1,30 @@
+<main class="container">
+  <h1>Bees</h1>
+
+
+
+  <table class="table-container">
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th>How hungry?</th>
+      <th></th>
+      <th>Type</th>
+    </tr>
+    <% for bee in @bees %>
+    <tr>
+      <td><a href="/bees/<%= bee.id %>"><%= bee.name %></a></td>
+      <td>|</td>
+      <td><%= bee.how_hungry %></td>
+      <td>|</td>
+      <td><%= bee.type_of_bee.name.capitalize %></td>
+    </tr>
+    <% end %>
+  </table>
+  <br>
+  <p>
+    <a href="/bees/new">
+    <input class="btn btn--danger orange-link" type="submit" value="Create own bee"/></a>
+  </p>
+<br>
+</main>

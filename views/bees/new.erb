@@ -1,0 +1,35 @@
+<main class="container">
+
+<p>Create a new Bee below</p>
+<form method="POST" action="/bees">
+
+<div class="form-el">
+<label for="name">Name:</label>
+  <input type="text" name="name" id="name"/>
+</div>
+
+  <br>
+
+  <div class="form-el">
+    <label for="type_select">Select Type:</label>
+  <select name="type_id" id="type_select">
+  <% for type in @types %>
+    <option value=<%=type.id%>><%=type.name%></option>
+    <% end %>
+ </select>
+</div>
+
+  <br>
+
+  <div class="form-el">
+  <label for="hunger-level"> How hungry? (max 100):</label>
+    <input id="hunger-level" type="number" name="hunger_level"/>
+  </div>
+
+
+  <br><br>
+  <div class="form-el">
+  <input class="btn btn--danger orange-link" type="submit" value="Become"/>
+  </div>
+</form>
+</main>

@@ -1,0 +1,31 @@
+<main class="container"><h1><%= @plant.name %></h1>
+
+  <h2>Season to plant:</h2>
+  <p><%= @plant.season %></p>
+  <h2> Pollen: </h2>
+  <p><%= @plant.pollen %></p>
+
+
+  <h2>Pollinated by:</h2>
+  <p>
+  <ul>
+    <% @plant.bee_pollinated_plant.each do |bee| %>
+    <li><%= bee.name %></li>
+    <% end %>
+  </ul></p>
+  <br>
+  <form method="POST" action="/plants/<%= @plant.id %>/edit">
+    <div class="form-wrapper">
+
+      <div class="form-el">
+        <input class="btn btn--danger orange-link" type="submit" value="Change my plant"/>
+      </div>
+
+    </div>
+  </form>
+
+  <form class="" action="/plants/<%= @plant.id%>/delete" method="post">
+    <input class="btn btn--danger orange-link" type="submit" value="DELETE">
+  </form>
+
+</main>

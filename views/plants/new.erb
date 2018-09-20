@@ -1,0 +1,36 @@
+<main class="container">
+  <p>Plant a new plant below</p>
+  <form method="POST" action="/plants">
+
+  <div class="form-el">
+  <label for="name">Name:</label>
+    <input class="input-data" type="text" name="name" id="name"/>
+  </div>
+
+    <br>
+
+  <div class="form-el">
+      <label for="type_select">Select Season to Plant:</label>
+    <select class="input-data" name="season" id="type_select">
+    <% for season in @seasons %>
+      <option value=<%=season%>><%=season.capitalize%></option>
+      <% end %>
+   </select>
+  </div>
+  <br>
+
+
+    <div class="form-el">
+      <label for="pollen">Pollen (max 100):</label>
+      <input class="input-data" id="pollen" type="number" name="pollen"/>
+    </div>
+
+
+
+    <p>
+    <div class="form-el">
+    <input class= "btn btn--danger orange-link" id="submit" type="submit" value="Plant it!"/>
+    </div>
+  </p>
+  </form>
+</main>

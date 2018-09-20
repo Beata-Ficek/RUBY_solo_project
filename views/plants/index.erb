@@ -1,0 +1,26 @@
+<main class="container">
+  <h1>Plants</h1>
+
+  <table class="table-container">
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th>Season to plant</th>
+      <th></th>
+      <th>Pollen</th>
+    </tr>
+    <% for plant in @plants %>
+    <tr>
+      <td><a href="/plants/<%= plant.id %>"><%= plant.name %></a></td>
+      <td>|</td>
+      <td><%= plant.season %></td>
+      <td>|</td>
+      <td><%= plant.pollen %></td>
+    </tr>
+    <% end %>
+  </table>
+
+    <p>
+      <a href="/plants/new"><input class= "btn btn--danger orange-link" type="submit" value="Create own plant"/></a>
+    </p>
+  </main>

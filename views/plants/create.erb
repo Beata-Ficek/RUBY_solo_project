@@ -1,0 +1,12 @@
+<main class="container"><h2>You successfully created <%= @plant.name.capitalize %></h2>
+<br>
+  <p>Season to plant: <i> <%= @plant.season %> </i></p>
+  <p> Pollen: <%= @plant.pollen %></p>
+<p>
+
+  <form method="GET" action="/foods/new">
+    <div class="form-wrapper">
+
+      <div class="form-el">
+        <input class= "btn btn--danger orange-link" type="submit" value="pollinate it"/>
+      </div></p>

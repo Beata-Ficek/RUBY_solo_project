@@ -1,0 +1,36 @@
+  <main class="container">
+
+  <h2>Edit <%= @bee.name %></h2>
+  <form method="POST" action="/bees/<%= @bee.id %>">
+    <div class="form-wrapper">
+
+      <div class="form-el">
+        <label for="name"><p>Name:</label>
+        <input type="text" name="name" id="name" value="<%= @bee.name %>"/>
+      </div>
+
+      <div class="form-el">
+        <label for="type_select">Select Type:</label>
+      <select name="type_id" id="type_select" selected="<%= @bee.type_id  %>">
+      <% @types.each do |type| %>
+        <% if type.id == @bee.type_id %>
+          <option value=<%= type.id %> selected><%= type.name.capitalize %></option>
+        <% else %>
+          <option value=<%= type.id %>><%= type.name.capitalize %></option>
+        <% end %>
+       <% end %>
+     </select>
+  </div>
+    <br>
+      <label for="hunger-level">How hungry? (max 100):</label>
+        <input id="hunger-level" type="number" name="hunger_level"/>
+        <br><br>
+
+
+      <div class="form-el">
+        <input class="btn btn--danger orange-link" type="submit" value="Accept this new bee"/>
+      </div>
+
+    </div>
+  </form>
+</main>

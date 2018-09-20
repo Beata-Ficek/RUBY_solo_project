@@ -1,0 +1,9 @@
+input[type="submit"] {
+  text-transform: uppercase;
+  font-family: 'Playfair display';
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
