@@ -1,3 +1,6 @@
 source 'https://rubygems.org'
 gem 'sinatra'
-ruby '2.4.4'
+gem 'sinatra-contrib'
+gem 'pg'
+ruby '2.5.1'
+gem 'pry-byebug'

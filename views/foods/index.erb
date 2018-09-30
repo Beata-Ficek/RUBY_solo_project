@@ -9,11 +9,11 @@
     <% for food in @foods %>
     <li>
     <p><%= food.bee.name %> <%= @actions.sample %> <%= food.plant.name %> </p>
-      <p>
+
         <form action="/foods/<%= food.id %>/delete" method="POST">
           <input class="btn btn--danger orange-link" type="submit" value="delete" />
         </form>
-      </p>
+
     </li>
     <% end %>
   </ul>

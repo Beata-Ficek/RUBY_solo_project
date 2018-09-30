@@ -12,7 +12,7 @@
     <% @plant.bee_pollinated_plant.each do |bee| %>
     <li><%= bee.name %></li>
     <% end %>
-  </ul></p>
+  </ul>
   <br>
   <form method="POST" action="/plants/<%= @plant.id %>/edit">
     <div class="form-wrapper">
